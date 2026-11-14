@@ -35,7 +35,7 @@ export function shortReason({ test, verdict }: TraceTest): string {
       return test.memory ? MEMORY_LABEL[test.memory.kind] : "memory error";
     case "wrong-return":
       return "wrong return value";
-    case "exit-nonzero":
+    case "wrong-exit-code":
       return `exit code ${String(test.exitCode)}`;
     case "wrong-output":
       return "wrong output";
@@ -68,8 +68,8 @@ export function longReason({ test, verdict }: TraceTest): string {
         : "the returned value differs from the expected one.";
       return `wrong return value: ${facts} ${matched ? "Output matched." : "Output differs too, see below."}`;
     }
-    case "exit-nonzero":
-      return `exit code ${String(test.exitCode)}: expected 0.${matched ? ` ${OUTPUT_MATCHED_ALONE}` : ""}`;
+    case "wrong-exit-code":
+      return `exit code ${String(test.exitCode)}: expected ${String(test.expectedExitCode ?? 0)}.${matched ? ` ${OUTPUT_MATCHED_ALONE}` : ""}`;
     case "wrong-output":
       return "wrong output";
   }

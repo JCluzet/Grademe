@@ -1,6 +1,6 @@
 {
   "name": "grademe",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Timed coding challenges in your terminal",
   "license": "MIT",
   "private": true,
@@ -32,9 +32,9 @@
     "@types/node": "24.19.2",
     "@types/react": "19.3.0",
     "ink-testing-library": "4.0.0",
-    "jsdom": "30.1.3",
+    "jsdom": "31.0.0",
     "tsup": "9.0.0",
-    "vitest": "5.0.5",
+    "vitest": "5.1.0",
     "typescript": "7.0.2"
   }
 }

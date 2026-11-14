@@ -4,7 +4,7 @@
 
 A real terminal, a full IDE and grading the second you hit submit, all in your browser. Write C, C++ or Python, submit, and see exactly which test failed and why, down to a missing newline.
 
-It's free and open to everyone 👉 **[grademe.io](https://grademe.io)**
+It's free and open to everyone 👉 **[grademe.io](https://grademe.io/?utm_source=github-cli-repo)**
 
 Start with **Learn C**, a path from your first program down to the system underneath, where every chapter ends on a timed checkpoint. Then take on **Challenges**: a series of exercises against one clock, level after level. Each challenge moves your Elo, every exercise you pass earns XP, and the leaderboards show where you stand.
 
@@ -18,7 +18,7 @@ When your code does something you don't understand, open the **Visualizer**. Ste
 
 Un vrai terminal, un IDE complet et une correction à la seconde où tu soumets, le tout dans ton navigateur. Tu codes en C, C++ ou Python, tu soumets, et tu vois exactement quel test a échoué et pourquoi, jusqu'au retour à la ligne oublié.
 
-C'est gratuit et ouvert à tout le monde 👉 **[grademe.io](https://grademe.io)**
+C'est gratuit et ouvert à tout le monde 👉 **[grademe.io](https://grademe.io/?utm_source=github-cli-repo)**
 
 Commence par **Learn C**, un parcours qui part de ton premier programme et descend jusqu'au système, chaque chapitre se terminant par un checkpoint chronométré. Ensuite, attaque les **Challenges** : une série d'exercices contre la montre, niveau après niveau. Chaque challenge fait bouger ton Elo, chaque exercice réussi te rapporte de l'XP, et les classements te montrent où tu en es.
 
@@ -26,13 +26,13 @@ Quand ton code fait un truc que tu ne comprends pas, ouvre le **Visualiseur**. T
 
 La **synchro GitHub** pousse tes solutions validées sur un dépôt qui t'appartient. Dans le **Studio**, tu écris tes propres exercices et challenges avec leurs tests, puis tu les partages avec tout le monde. Et si tu préfères rester dans ton terminal, le **CLI** est juste ici (voir plus bas).
 
-<img width="2000" height="1074" alt="The Grademe dashboard" src=".github/dashboard.webp" />
+<img width="1710" height="1072" alt="image" src="https://github.com/user-attachments/assets/c3813472-5a35-42c2-ade4-eff4ed537a81" />
 
 ---
 
 ## Grademe in your terminal
 
-This repository is the Grademe command line client. Same challenges, same grading, but you write the code in your own editor and submit from your terminal. Your account, your progress and the leaderboard all live on **[grademe.io](https://grademe.io)**, so sign up there first.
+This repository is the Grademe command line client. Same challenges, same grading, but you write the code in your own editor and submit from your terminal. Your account, your progress and the leaderboard all live on **[grademe.io](https://grademe.io/?utm_source=github-cli-repo)**, so sign up there first.
 
 ```sh
 git clone https://github.com/JCluzet/Grademe.git
@@ -59,11 +59,11 @@ make ARGS="logout"                  # sign out and revoke this device
 make test                           # run the test suite
 ```
 
-Want every exercise, no cooldown and the full IDE in your browser? It's all on 👉 **[grademe.io](https://grademe.io)**
+Want every exercise, no cooldown and the full IDE in your browser? It's all on 👉 **[grademe.io](https://grademe.io/?utm_source=github-cli-repo)**
 
 ### En français
 
-Clone le repo, lance `make` et connecte-toi avec ton compte [grademe.io](https://grademe.io). Il te faut Node.js 22 ou plus, sinon passe par la commande `curl` juste au dessus.
+Clone le repo, lance `make` et connecte-toi avec ton compte [grademe.io](https://grademe.io/?utm_source=github-cli-repo). Il te faut Node.js 22 ou plus, sinon passe par la commande `curl` juste au dessus.
 
 ## License
 

@@ -37,6 +37,12 @@ describe("shortReason / longReason", () => {
     expect(longReason(t)).toBe("exit code 1: expected 0. Output matched; this alone fails the test.");
   });
 
+  it("names the exit code the test expects", () => {
+    const t = entry({ exitCode: 0, expectedExitCode: 2 });
+    expect(shortReason(t)).toBe("exit code 0");
+    expect(longReason(t)).toBe("exit code 0: expected 2. Output matched; this alone fails the test.");
+  });
+
   it("names the memory error family and quotes the Valgrind detail", () => {
     const t = entry({ exitCode: 86, memory: { detail: "5 bytes definitely lost in main (a.c:29)", kind: "leak" } });
     expect(shortReason(t)).toBe("memory leak");

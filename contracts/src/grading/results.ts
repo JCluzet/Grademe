@@ -15,6 +15,7 @@ export const gradeTestResultSchema = z.object({
   command: z.string(),
   exitCode: z.number().int(),
   expected: z.string().nullable(),
+  expectedExitCode: z.number().int().optional(),
   expectedRaw: z.string().optional(),
   memory: memorySchema.optional(),
   memoryChecked: z.boolean().optional(),

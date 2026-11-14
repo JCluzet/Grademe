@@ -34,8 +34,14 @@ describe("classifyTestFailure", () => {
     expect(classifyTestFailure(makeTest({ exitCode: 139, signal: "SIGSEGV" }))).toBe("crash");
   });
 
-  it("identifies exit-nonzero when no signal and no timeout", () => {
-    expect(classifyTestFailure(makeTest({ exitCode: 1 }))).toBe("exit-nonzero");
+  it("identifies a wrong exit code when no signal and no timeout", () => {
+    expect(classifyTestFailure(makeTest({ exitCode: 1 }))).toBe("wrong-exit-code");
+  });
+
+  it("compares the exit code with the one the test expects", () => {
+    expect(classifyTestFailure(makeTest({ exitCode: 0, expectedExitCode: 2 }))).toBe("wrong-exit-code");
+    expect(classifyTestFailure(makeTest({ exitCode: 1, expectedExitCode: 2 }))).toBe("wrong-exit-code");
+    expect(classifyTestFailure(makeTest({ exitCode: 2, expectedExitCode: 2 }))).toBe("wrong-output");
   });
 
   it("identifies memory and wins over the Valgrind 86 exit code", () => {

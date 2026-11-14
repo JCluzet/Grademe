@@ -4,7 +4,7 @@ export type FailureReason =
   | "crash"
   | "timeout"
   | "memory"
-  | "exit-nonzero"
+  | "wrong-exit-code"
   | "wrong-return"
   | "wrong-output";
 
@@ -14,6 +14,6 @@ export function classifyTestFailure(test: GradeTestResult): FailureReason | null
   if (test.signal !== null) return "crash";
   if (test.memory) return "memory";
   if (test.returnValue !== undefined) return "wrong-return";
-  if (test.exitCode !== 0) return "exit-nonzero";
+  if (test.exitCode !== (test.expectedExitCode ?? 0)) return "wrong-exit-code";
   return "wrong-output";
 }
